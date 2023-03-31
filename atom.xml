@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小晗のBlog</title>
+  
+  <subtitle>Sharing out of love</subtitle>
+  <link href="https://ops-han.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://ops-han.github.io/"/>
+  <updated>2023-03-31T13:23:38.488Z</updated>
+  <id>https://ops-han.github.io/</id>
+  
+  <author>
+    <name>Guo hanzhe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从零开始的【校园商铺】毕设全栈开发</title>
+    <link href="https://ops-han.github.io/2023/03/31/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E3%80%90%E6%A0%A1%E5%9B%AD%E5%95%86%E9%93%BA%E3%80%91%E6%AF%95%E8%AE%BE%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"/>
+    <id>https://ops-han.github.io/2023/03/31/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E3%80%90%E6%A0%A1%E5%9B%AD%E5%95%86%E9%93%BA%E3%80%91%E6%AF%95%E8%AE%BE%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/</id>
+    <published>2023-03-31T13:21:08.000Z</published>
+    <updated>2023-03-31T13:23:38.488Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>不知不觉已经在大学中度过了四年时光，春暖花开、桃红柳绿，又到了一年毕设季。我的毕设选题是「校园商铺」全栈开发，我将会分享我的毕业设计详细过程和技术细节，希望能够对正在进行类似项目的读者提供一些帮助和启示。</p></blockquote><h2 id="开题报告"><a href="#开题报告" class="headerlink" title="开题报告"></a>开题报告</h2><h3 id="1-选题意义"><a href="#1-选题意义" class="headerlink" title="1. 选题意义"></a>1. 选题意义</h3><p>随着互联网的快速发展，电子商务已经成为了现代商业的重要组成部分。在线商城系统作为电子商务的一种重要形式，已经成为了商家和消费者之间进行交易的主要平台。虽然市面上的在线商城产品已经趋于饱和，然而，在大学校园的商品交易场景中，商城系统仍有较大的价值空间，因此该在线商城系统主要针对高校内的学生群体进行设计。</p><p>加之大学校园经济有一定的特殊性，主要体现在消费群体单一，稳定性高，购买行为具有多次重复性。校园商铺不仅给在校生提供了方便快捷的商品购买的同时，也是一个很好的盈利方式。</p><hr><h3 id="2-国内外研究现状"><a href="#2-国内外研究现状" class="headerlink" title="2. 国内外研究现状"></a>2. 国内外研究现状</h3><p>国外电子商务平台在近十年的发展过程中，创造了一个个营销神话，电子商务带来的巨大商业前景吸引着越来越多的企业对其进行开发研究。根据国际知名调查公司 E-marketer 的数据，2011 年到 2016 年，全球网络零售交易额从 0.86 万亿美元增长至 1.92 万亿美元，年平均增长率达 17.4%。未来五年，随着全球智能手机保有量不断提升、互联网使用率持续提高、新兴市场快速崛起，全球网络零售仍将保持两位数增长。</p><p>根据中研普华产业研究院 2023 年公布的中国网上商城行业研究报告[3] 显示，中国网上商城零售额 2022 年达 13 万亿元，按年增长 14.1%。实物商品网上零售规模升至 10.8 万亿元，两年平均增长 13.4%，增速明显高于线下消费；占社会消费品零售总额比重保持在 24.5%。从增长速率来看，尽管网上商城经过了十几年的发展，未来线上商城在一些细分领域仍有进一步的增长空间。例如把电子商务这一概念引入高校，建成满足校园实际情况的电子商务系统在我国说还处于探索起步的发展阶段。</p><p>目前国内外的校园在线商城系统相关案例较少，针对校园的在线商城系统如张文娟[5] 设计的校园商铺系统实现了用户的登录注册、商品上架、商品购买、后台管理等基础功能，要想满足高效学生的实际需求还需要进行扩展与完善。在功能上要支持门店与商户管理，引入积分功能；在系统架构上，需要从单数据库转移至数据库加缓存的模式，加快在线系统后端的响应速度，提升广大学生群体的使用体验。</p><hr><h3 id="3-主要研究内容"><a href="#3-主要研究内容" class="headerlink" title="3. 主要研究内容"></a>3. 主要研究内容</h3><p>在线商城系统设计主要分为前台模块、商家模块与超级管理员模块，所以在设计本系统时要根据用户对在线商城系统的需求和期望、进行综合分析，在明确目标的基础上，进行在线商城系统的搭建。本系统采用 Java 语言和 SSM 框架，基于 MVC 分层模型进行前端和后端功能开发，为项目后续迁移至 SpringBoot 平台提供便利，减轻系统维护与代码重构的复杂度。</p><hr><h3 id="4-拟采用的研究思路"><a href="#4-拟采用的研究思路" class="headerlink" title="4. 拟采用的研究思路"></a>4. 拟采用的研究思路</h3><ol><li>关键理论和技术<ul><li>SSM 框架：SSM 框架是 Spring、SpringMVC 和 Mybatis 框架的集合，使用 Spring 实现业务对象管理，使用 SpringMVC 负责请求的转发和视图管理，Mybatis 作为数据对象的持久化引擎。</li><li>SUI Mobile：SUI Mobile 是一套基于 Framework7 开发的 UI 库，其轻量、自适应的特点，非常适合开发跨平台的 web app。</li><li>Mysql：关系型数据库 Mysql 是 Oracle 旗下开源产品，在 Web 应用方面，Mysql 是最好的 RDBMS 软件之一。</li><li>Redis：Redis 是一款 Nosql 数据库，提供数据库缓存服务，用以支撑大规并发请求，缓解数据库压力，提高系统整体的稳定性。</li></ul></li><li>技术指标<ul><li>前台模块：实现会员注册、登录、店铺详情、商品详情页、个人信息展示页面。</li><li>商家模块：实现商户入驻、门店管理、商品折扣、活跃度统计、积分管理功能。</li><li>超级管理员模块：实现头条管理、店铺管理、商品管理、新店铺审批等功能。</li></ul></li><li>技术路线<br> 本系统的设计与实现分为以下四个阶段：<ul><li>通过查阅相关资料，咨询校园二手交易群内的同学，了解在线商城系统的发展历程、现状和存在的问题，为系统设计提供参考。</li><li>采用面向对象的设计方法，设计系统的架构和模块。</li><li>完成前端和后端的代码编写。</li><li>采用黑盒测试与白盒测试相结合的方法，对系统进行测试和优化，提高系统的性能和稳定性。</li></ul></li><li>可行性论证<ul><li>经济可行性：系统开发成本较低，前端与后端均使用开源框架与产品进行搭建。</li><li>技术可行性：采用 SSM 框架与 SUI 前端组件库进行在线商城系统开发，以现有技术可以实现本系统的功能。</li><li>法律可行性：该系统是自主开发设计的，因此不会构成侵权，在法律上是可行的。</li></ul></li></ol><hr><h3 id="5-研究工作安排"><a href="#5-研究工作安排" class="headerlink" title="5. 研究工作安排"></a>5. 研究工作安排</h3><ol><li>需求分析：对在线商城系统的需求进行分析，包括用户需求、商家需求、系统需求等方面。</li><li>系统设计：设计在线商城系统的架构、数据库、界面等方面。</li><li>系统实现：使用SSM框架与SUI前端组件库实现在线商城系统的功能，包括用户注册、商品展示、购物车、订单管理等方面。</li><li>系统测试：对在线商城系统进行功能测试、性能测试、安全测试等方面的测试。</li><li>系统部署：将在线商城系统部署到服务器上，以便用户可以访问和使用。</li></ol><hr><h3 id="6-参考文献"><a href="#6-参考文献" class="headerlink" title="6. 参考文献"></a>6. 参考文献</h3><pre><code>[1]Ying Xin Liu,Xi Yuan Li. Design and Implementation of a Business Platform System Based on Java[J]. Procedia Computer Science,2020[2]毋国庆,梁正平,袁梦霆,李永华.软件需求工程[M],机械工业出版社,2015[3]刘明月,中国网上商城行业研究咨询报告[R],中研普华产业研究院, 2023[4]陈莲.基于Java的Web开发技术[J].电子技术与软件工程,2021[5]张文娟.互联网时代校园商铺平台系统的设计与实现[J].信息记录材料,2020</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;不知不觉已经在大学中度过了四年时光，春暖花开、桃红柳绿，又到了一年毕设季。我的毕设选题是「校园商铺」全栈开发，我将会分享我的毕业设计详细过程和技术细节，希望能够对正在进行类似项目的读者提供一些帮助和启示。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2</summary>
+      
+    
+    
+    
+    
+    <category term="java,毕设" scheme="https://ops-han.github.io/tags/java-%E6%AF%95%E8%AE%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://ops-han.github.io/2023/03/30/hello-world/"/>
+    <id>https://ops-han.github.io/2023/03/30/hello-world/</id>
+    <published>2023-03-30T13:53:43.013Z</published>
+    <updated>2023-03-30T13:53:43.013Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
